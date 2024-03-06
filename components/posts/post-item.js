@@ -18,13 +18,7 @@ export default function PostsItem({ title, image, excerpt, date, slug }) {
     <div className={classes.post}>
       <Link href={linkPath}>
         <div className={classes.image}>
-          <Image
-            src={imagePath}
-            alt="title"
-            width={300}
-            height={200}
-            layout="responsive"
-          />
+          <Image src={imagePath} alt={title} fill />
         </div>
         <div className={classes.content}>
           <h3>{title}</h3>
