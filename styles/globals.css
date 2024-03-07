@@ -10,3 +10,9 @@
 body {
   background-color: #eee;
 }
+
+#notification-block {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

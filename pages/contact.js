@@ -1,3 +1,14 @@
+import Head from "next/head"
+import ContactForm from "@/components/contact/contact-form"
+
 export default function ContactPage() {
-  return <></>
+  return (
+    <>
+      <Head>
+        <title>Contact me</title>
+        <meta name="description" content="Send me message." />
+      </Head>
+      <ContactForm />
+    </>
+  )
 }

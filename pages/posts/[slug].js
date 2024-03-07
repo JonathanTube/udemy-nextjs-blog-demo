@@ -1,8 +1,18 @@
+import Head from "next/head"
 import PostContent from "@/components/posts/post-detail/post-content"
 import { getPostData } from "@/lib/posts-utils"
+import { createPortal } from "react-dom"
 
 export default function PostPage({ post }) {
-  return <PostContent post={post} />
+  return (
+    <>
+      <Head>
+        <title>{post.title}</title>
+        <meta name="description" content={post.excerpt} />
+      </Head>
+      <PostContent post={post} />
+    </>
+  )
 }
 
 export async function getStaticProps(context) {
@@ -23,6 +33,6 @@ export async function getStaticProps(context) {
 export function getStaticPaths() {
   return {
     paths: [],
-    fallback: true
+    fallback: "blocking"
   }
 }
