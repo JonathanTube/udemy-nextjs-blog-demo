@@ -6,6 +6,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { atmoDark } from "react-syntax-highlighter/dist/cjs/styles/prism"
 
 export default function PostContent({ post }) {
+  console.log(post.content)
   const customComponents = {
     p(props) {
       const { node } = props
@@ -39,7 +40,7 @@ export default function PostContent({ post }) {
           {children}
         </SyntaxHighlighter>
       )
-    }
+    },
   }
 
   if (post) {
