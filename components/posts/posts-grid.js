@@ -5,7 +5,7 @@ export default function PostsGrid({ posts }) {
   return (
     <ul className={classes.grid}>
       {posts.map((post) => (
-        <li>
+        <li key={post.slug}>
           <PostItem key={post.slug} {...post} />
         </li>
       ))}

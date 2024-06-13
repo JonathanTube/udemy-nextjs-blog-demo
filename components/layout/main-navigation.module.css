@@ -23,3 +23,9 @@
   display: flex;
   gap: 2rem;
 }
+
+.env {
+  color: rgb(184, 210, 84);
+  font-weight: bold;
+  font-size: 30px;
+}

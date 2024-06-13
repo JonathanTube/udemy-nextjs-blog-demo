@@ -7,6 +7,7 @@ export default function MainNavigation() {
       <Link href="/" className={classes.logo}>
         <Logo />
       </Link>
+      <div className={classes.env}>Enviroment: {process.env.title}</div>
       <nav>
         <ul>
           <li>
